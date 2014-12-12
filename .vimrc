@@ -18,8 +18,10 @@ Plugin 'bling/vim-airline'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-Plugin 'freeo/vim-kalisi'
 Plugin 'Valloric/YouCompleteMe'
+"" colorschemes
+Plugin 'freeo/vim-kalisi'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,23 +75,10 @@ set expandtab
 
 """"""""""""""""""""""
 "
-" vim-airline settings:
+" YouCompleteMe settings:
 "
 """"""""""""""""""""""
-" In order to have the vim-airline working you have to download patched fonts
-" that you can find here https://github.com/powerline/fonts
-" extract the fonts you use in ~/.fonts/ and give the following command
-" fc-cache -vf ~/.fonts/
-" Last but not least, choose one of the installed fonts as the default one
-" for your terminal because vim will use it
-"
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-" use kalisi theme
-let g:airline_theme = 'kalisi'
-let g:airline_powerline_fonts = 1
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 """"""""""""""""""""""
 "
@@ -142,15 +131,42 @@ nmap <leader>bs :CtrlPMRU<cr>
 
 """"""""""""""""""""""
 "
-" kalisi settings:
+" colorscheme settings:
 "
 """"""""""""""""""""""
-set t_Co=256
-colorscheme kalisi
-" set background=light
-" or
+ 
+""" kalisi
+"set t_Co=256
+"colorscheme kalisi
+
+""" solarized
+set t_Co=16
+colorscheme solarized
+let g:solarized_termcolors=16
+let g:solarized_termtrans=1
+
+" dark background FTW
 set background=dark
-" if you don't set the background, the light theme will be used
+
+""""""""""""""""""""""
+"
+" vim-airline settings:
+"
+""""""""""""""""""""""
+" In order to have the vim-airline working you have to download patched fonts
+" that you can find here https://github.com/powerline/fonts
+" extract the fonts you use in ~/.fonts/ and give the following command
+" fc-cache -vf ~/.fonts/
+" Last but not least, choose one of the installed fonts as the default one
+" for your terminal because vim will use it
+"
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+" change colorscheme to use the correct one
+let g:airline_theme = 'solarized'
+let g:airline_powerline_fonts = 1
 
 """"""""""""""""""""""
 "
