@@ -65,13 +65,16 @@ set autochdir
 " Wrap text instead of being on one line
 set lbr
 
-" enable mouse support for all modes
+" Enable mouse support for all modes
 set mouse=a
 
 set tabstop=3
 set softtabstop=3
 set shiftwidth=3
 set expandtab
+
+" Highlight characters that exceed the 80th column
+match ErrorMsg '\%>80v.\+'
 
 """"""""""""""""""""""
 "
