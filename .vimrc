@@ -47,6 +47,14 @@ filetype plugin indent on    " required
 filetype indent on
 set autoindent
 
+" Highlight column and line of the cursor
+set cursorcolumn cursorline
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+
+"fold based on indent
+set foldmethod=indent
+
 " Turn on line numbering. Turn it off with "set nonu" 
 set number
 
@@ -73,7 +81,7 @@ set softtabstop=3
 set shiftwidth=3
 set expandtab
 
-" Highlight characters that exceed the 80th column
+" Highlight characters that go over the 80th character
 match ErrorMsg '\%>80v.\+'
 
 """"""""""""""""""""""
