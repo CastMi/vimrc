@@ -163,8 +163,8 @@ nmap <C-n> :BuffergatorMruCycleNext<cr>
 
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|doc)$',
-  \ 'file': '\v\.(exe|zip|swp|lo|la|o|so|dll|png|jpg|jpeg)$',
+  \ 'dir':  '\v[\/](\.(git|hg|bzr|svn)|\_site|doc|(D|d)ocumentation)$',
+  \ 'file': '\v\.(exe|zip|fbp|odt|swp|lo|la|o|a|so|dll|svg|png|jpg|jpeg)$',
 \}
 
 " It will look at the nearest file it finds.
